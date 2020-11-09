@@ -20,28 +20,34 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="一.thrift架构thrift是一个跨语言的分布式的RPC，通过编写”.thrift”文件来定义接口和方法，客户端调用定义的接口和方法，服务端实现接口和方法。 ###1.组件： 1.Protocal：Protocal定义了消息如何序列化。常见的是TBinaryProtocol，TJSONProtocol，TCompactProtocol。 2.Transport：Transport定义了消息在客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="thrift笔记">
+<meta property="og:url" content="http://example.com/2020/11/09/thrift%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一.thrift架构thrift是一个跨语言的分布式的RPC，通过编写”.thrift”文件来定义接口和方法，客户端调用定义的接口和方法，服务端实现接口和方法。 ###1.组件： 1.Protocal：Protocal定义了消息如何序列化。常见的是TBinaryProtocol，TJSONProtocol，TCompactProtocol。 2.Transport：Transport定义了消息在客">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://thrift-tutorial.readthedocs.io/en/latest/_images/Apache_Thrift_architecture.png">
+<meta property="article:published_time" content="2020-11-09T13:43:13.000Z">
+<meta property="article:modified_time" content="2020-11-09T13:43:54.461Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://thrift-tutorial.readthedocs.io/en/latest/_images/Apache_Thrift_architecture.png">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2020/11/09/thrift%E7%AC%94%E8%AE%B0/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Hexo</title>
+  <title>thrift笔记 | Hexo</title>
   
 
 
@@ -139,9 +145,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
@@ -157,10 +164,9 @@
       <meta itemprop="name" content="Hexo">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/11/09/thrift%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">thrift笔记</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          thrift笔记
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -184,7 +190,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="一-thrift架构"><a href="#一-thrift架构" class="headerlink" title="一.thrift架构"></a>一.thrift架构</h2><p>thrift是一个跨语言的分布式的RPC，通过编写”.thrift”文件来定义接口和方法，客户端调用定义的接口和方法，服务端实现接口和方法。</p>
+        <h2 id="一-thrift架构"><a href="#一-thrift架构" class="headerlink" title="一.thrift架构"></a>一.thrift架构</h2><p>thrift是一个跨语言的分布式的RPC，通过编写”.thrift”文件来定义接口和方法，客户端调用定义的接口和方法，服务端实现接口和方法。</p>
 <p>###1.组件：</p>
 <p>1.Protocal：Protocal定义了消息如何序列化。常见的是TBinaryProtocol，TJSONProtocol，TCompactProtocol。</p>
 <p>2.Transport：Transport定义了消息在客户端和服务端如何通信。常见的是TSocket，TFramedTransport，TNonblockingTransport等。</p>
@@ -233,21 +239,23 @@
 
 
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+
+        
+
+
+        
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -300,6 +308,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80-thrift%E6%9E%B6%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">一.thrift架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C-thrift%E4%BD%BF%E7%94%A8"><span class="nav-number">2.</span> <span class="nav-text">二. thrift使用</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
